@@ -2,3 +2,4 @@
 
 - Score Keeper
 - Todo list demo
+- Color Game
