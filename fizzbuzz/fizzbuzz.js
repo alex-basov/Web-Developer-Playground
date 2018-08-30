@@ -1,5 +1,12 @@
-const output = fizzBuzz(15);
-console.log(output);
+const numberInput = document.querySelector('#numberInput');
+const resultDisplay = document.querySelector('#resultDisplay');
+resultDisplay.style.color = '#cecece';
+
+numberInput.addEventListener('change', function() {
+  let output = fizzBuzz(Number(this.value));
+  resultDisplay.textContent = output;
+  resultDisplay.style.color = 'red';
+});
 
 function fizzBuzz(input) {
   if (typeof input !== 'number') return NaN;
