@@ -1,36 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>FizzBuzz</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>FizzBuzz</title>
-  <link rel="stylesheet" href="fizzbuzz.css">
-</head>
+  <body>
+    <div class="container">
+      <h2>FizzBuzz algorithm</h2>
+      <h3>Description:</h3>
+      <p>We give it an input and it returns a string</p>
+      <ul>
+        <li>Divisible by 3 => Fizz</li>
+        <li>Divisible by 5 => Buzz</li>
+        <li>Divisible by both 3 and 5 => FizzBuzz</li>
+        <li>Not divisible by 3 or 5 => input</li>
+        <li>Not a number => 'Not a number'</li>
+      </ul>
 
-<body>
-
-  <div class="container">
-    <h2>FizzBuzz algorithm</h2>
-    <h3>Description:</h3>
-    <p>We give it an input and it returns a string</p>
-    <ul>
-      <li>Divisible by 3 => Fizz</li>
-      <li>Divisible by 5 => Buzz</li>
-      <li>Divisible by both 3 and 5 => FizzBuzz</li>
-      <li>Not divisible by 3 or 5 => input</li>
-      <li>Not a number => 'Not a number'</li>
-    </ul>
-
-    <div class="solution-block">
-      <h3>Solution:</h3>
-      <label for="number">Type any number: <input id="numberInput" type="text" placeholder="number"></label>
-      <p>Output: <span id="resultDisplay">You haven't typed anything.</span></p>
+      <div class="solution-block">
+        <h3>Solution:</h3>
+        <label for="number"
+          >Type any number:
+          <input id="numberInput" type="text" placeholder="number"
+        /></label>
+        <p>
+          Output: <span id="resultDisplay">You haven't typed anything.</span>
+        </p>
+      </div>
     </div>
-  </div>
 
-  <script src="fizzbuzz.js"></script>
-</body>
-
+    <script src="fizzbuzz.js"></script>
+  </body>
 </html>

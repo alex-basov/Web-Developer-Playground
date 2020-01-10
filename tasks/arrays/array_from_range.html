@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>FizzBuzz</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+</head>
+
+<body>
+  <div class="container mt-5">
+    <h1 class="mb-3">Array from range</h1>
+    <h4>Description:</h4>
+    <p>
+      A function takes 2 parameters <b>Min</b> and <b>Max</b> and returns an
+      array from this range
+    </p>
+
+    <div class="solution-block">
+      <h4>Solution:</h4>
+
+      <div class="input-group mb-3">
+        <input type="number" id="min-number" class="form-control" placeholder="Min number"
+          aria-label="Min number input">
+        <input type="number" id="max-number" class="form-control" placeholder="Max number"
+          aria-label="Max number input">
+        <div class="input-group-append">
+          <button class="btn btn-outline-secondary" type="button" id="submit-button">Button</button>
+        </div>
+      </div>
+
+      <h5>The range:</h5>
+      <p id="resulting-array">You haven't typed anything.</p>
+    </div>
+  </div>
+
+  <script src="array_from_range.js"></script>
+</body>
+
+</html>
