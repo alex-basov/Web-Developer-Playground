@@ -6,6 +6,7 @@ const output = document.querySelector('#generated-array');
 let array = [];
 
 generateBtn.onclick = () => {
+  array = [];
   arrayLength = arrayLengthField.value;
   for (let i = 0; i < arrayLength; i++) {
     let number = Math.round(Math.random() * 99);
