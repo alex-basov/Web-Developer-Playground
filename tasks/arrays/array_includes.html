@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Includes</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+</head>
+
+<body>
+  <div class="container mt-5">
+    <h1 class="mb-3">Array includes</h1>
+    <h4>Task:</h4>
+    <p>
+      <ol>
+        <li>Generate an array with numbers from 0 to 99 with the specified length.</li>
+        <li>Check if a number in included in the array.</li>
+        <li>Show the array with that number.</li>
+        <li>Say that 'There is no such number' if it is not included.</li>
+      </ol>
+    </p>
+
+    <div class="solution-block">
+      <h4>Solution:</h4>
+      <p>Click <b>Generate</b> button to generate an array. Then type a number and click <b>Check</b></p>
+      <div class="input-group mb-3 col-sm-4">
+        <div class="input-group">
+          <input type="number" id="array-length" class="form-control" placeholder="Array length?"
+            aria-label="Min number input">
+          <div class="input-group-append">
+            <button class="btn btn-outline-secondary" type="button" id="generate-btn">Generate</button>
+          </div>
+        </div>
+      </div>
+      <div class="input-group mb-3 col-sm-4">
+        <div class="input-group">
+          <input type="number" id="user-number" class="form-control" placeholder="You number?"
+            aria-label="Min number input">
+          <div class="input-group-append">
+            <button class="btn btn-outline-secondary" type="button" id="submit-btn">Check</button>
+          </div>
+        </div>
+
+      </div>
+
+      <h5>The generated array:</h5>
+      <p id="generated-array">Click <b>Generate</b> button first.</p>
+    </div>
+  </div>
+
+  <script src="array_includes.js"></script>
+</body>
+
+</html>
