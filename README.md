@@ -4,7 +4,16 @@ Here's the place I solve JS related tasks
 
 [See it live](https://alex-basov.github.io/web-dev-playground/)
 
-* Score Keeper
-* Todo list demo
-* FizzBuzz algorithm
+## Apps
+* Blackjack
 * Color Game
+* Score Keeper
+
+## Exercises
+
+### Program Flow
+* FizzBuzz algorithm
+
+### Arrays
+* Array from range
+* Array includes
