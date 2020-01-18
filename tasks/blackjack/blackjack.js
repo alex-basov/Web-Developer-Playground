@@ -25,10 +25,18 @@ function createDeck() {
   let deck = [];
   for (let suitIdx = 0; suitIdx < suits.length; suitIdx++) {
     for (let valueIdx = 0; valueIdx < values.length; valueIdx++) {
-      deck.push(`${values[valueIdx]} of ${suits[suitIdx]}`);
+      let card = {
+        suit: suits[suitIdx],
+        value: values[valueIdx]
+      };
+      deck.push(card);
     }
   }
   return deck;
+}
+
+function getCardString(card) {
+  return card.value + ' of ' + card.suit;
 }
 
 function getNextCard() {
@@ -37,18 +45,12 @@ function getNextCard() {
 
 let deck = createDeck();
 
-console.groupCollapsed('The deck');
-for (let i = 0; i < deck.length; i++) {
-  console.log(deck[i]);
-}
-console.groupEnd();
-
 let playerCards = [getNextCard(), getNextCard()];
 
 console.group('The game');
 console.log('This is the Blackjack!');
 
 console.log('You are dealt: ');
-console.log('   ' + playerCards[0]);
-console.log('   ' + playerCards[1]);
+console.log('   ' + getCardString(playerCards[0]));
+console.log('   ' + getCardString(playerCards[1]));
 console.groupEnd();
