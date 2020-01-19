@@ -155,7 +155,33 @@ function updateScores() {
 }
 
 function checkForEndOfGame() {
-  // TODO
+  updateScores();
+
+  if (gameOver) {
+    // let dealer take cards
+    while (
+      dealerScore < playerScore &&
+      playerScore <= 21 &&
+      dealerScore <= 21
+    ) {
+      dealerCards.push(getNextCard());
+      updateScores();
+    }
+  }
+
+  if (playerScore > 21) {
+    playerWon = false;
+    gameOver = true;
+  } else if (dealerScore > 21) {
+    playerWon = true;
+    gameOver = true;
+  } else if (gameOver) {
+    if (playerScore > dealerScore) {
+      playerWon = true;
+    } else {
+      playerWon = false;
+    }
+  }
 }
 
 function showStatus() {
@@ -203,3 +229,6 @@ function showStatus() {
 function getNextCard() {
   return deck.shift(); // the card is removed from the deck
 }
+
+// TODO: win if you get blackjack
+// Add tie message if scores are equal
