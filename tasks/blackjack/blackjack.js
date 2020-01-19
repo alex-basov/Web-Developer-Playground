@@ -4,6 +4,7 @@
 
 console.clear();
 
+// Card constants
 const suits = ['Hearts', 'Clubs', 'Diamonds', 'Spades'];
 const values = [
   'Ace',
@@ -21,18 +22,24 @@ const values = [
   'Two'
 ];
 
+// DOM constants
 const textArea = document.querySelector('#text-area');
 const newGameBtn = document.querySelector('#new-game-btn');
 const hitBtn = document.querySelector('#hit-btn');
 const stayBtn = document.querySelector('#stay-btn');
 
-hideElement(hitBtn, stayBtn);
+// Game variables
+let gameStarted = false;
+let gaveOver = false;
+let playerWon = false;
+let dealerCards = [];
+let playerCards = [];
+let dealerScore = 0;
+let playerScore = 0;
+let deck = [];
 
-newGameBtn.addEventListener('click', () => {
-  textArea.innerText = 'Started...';
-  hideElement(newGameBtn);
-  showElement(hitBtn, stayBtn);
-});
+hideElement(hitBtn, stayBtn);
+showStatus();
 
 function hideElement(...elements) {
   elements.forEach(element => (element.style.display = 'none'));
@@ -41,6 +48,21 @@ function hideElement(...elements) {
 function showElement(...elements) {
   elements.forEach(element => (element.style.display = 'unset'));
 }
+
+newGameBtn.addEventListener('click', () => {
+  gameStarted = true;
+  gameOver = false;
+  playerWon = false;
+
+  deck = createDeck();
+  shuffleDeck(deck);
+  dealerCards = [getNextCard(), getNextCard()];
+  playerCards = [getNextCard(), getNextCard()];
+
+  hideElement(newGameBtn);
+  showElement(hitBtn, stayBtn);
+  showStatus();
+});
 
 function createDeck() {
   let deck = [];
@@ -56,22 +78,33 @@ function createDeck() {
   return deck;
 }
 
+// Shuffling cards
+function shuffleDeck(deck) {
+  for (let i = 0; i < deck.length; i++) {
+    let swapIdx = Math.trunc(Math.random() * deck.length);
+    // temporary card with random index the value of which
+    // will be assigned to the card with the current index
+    let tmp = deck[swapIdx];
+    deck[swapIdx] = deck[i];
+    deck[i] = tmp;
+  }
+}
+
 function getCardString(card) {
   return card.value + ' of ' + card.suit;
+}
+
+function showStatus() {
+  if (!gameStarted) {
+    textArea.innerText = 'Welcome to Blackjack!';
+    return;
+  }
+
+  for (let i = 0; i < deck.length; i++) {
+    textArea.innerText += '\n' + i + ': ' + getCardString(deck[i]);
+  }
 }
 
 function getNextCard() {
   return deck.shift(); // the card is removed from the deck
 }
-
-let deck = createDeck();
-
-let playerCards = [getNextCard(), getNextCard()];
-
-console.group('The game');
-console.log('This is the Blackjack!');
-
-console.log('You are dealt: ');
-console.log('   ' + getCardString(playerCards[0]));
-console.log('   ' + getCardString(playerCards[1]));
-console.groupEnd();
