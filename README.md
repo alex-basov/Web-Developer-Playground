@@ -17,3 +17,6 @@ Here's the place I solve JS related tasks
 ### Arrays
 * Array from range
 * Array includes
+
+## Events
+* Pricing Calculator
