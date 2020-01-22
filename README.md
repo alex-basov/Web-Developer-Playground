@@ -20,3 +20,4 @@ Here's the place I solve JS related tasks
 
 ## Events
 * Pricing Calculator
+* Jumping Buttons
