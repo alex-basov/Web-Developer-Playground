@@ -3,12 +3,11 @@ const resultDisplay = document.querySelector('#resultDisplay');
 resultDisplay.style.color = '#cecece';
 
 numberInput.addEventListener('change', function() {
-  let output = fizzBuzz(Number(this.value));
-  resultDisplay.textContent = output;
+  resultDisplay.textContent = script(Number(this.value));
   resultDisplay.style.color = 'red';
 });
 
-function fizzBuzz(input) {
+function script(input) {
   if (typeof input !== 'number') return NaN;
   else if (input % 5 === 0 && input % 3 === 0) return 'FizzBuzz';
   else if (input % 3 === 0) return 'Fizz';

@@ -22,3 +22,4 @@ Here's the place I solve JS related tasks
 * Pricing Calculator
 * Jumping Buttons
 * Stopwatch
+* Accordion
