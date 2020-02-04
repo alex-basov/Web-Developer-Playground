@@ -19,7 +19,8 @@ Here's the place I solve JS related tasks
 * Array includes
 
 ## Events
-* Pricing Calculator
-* Jumping Buttons
-* Stopwatch
 * Accordion
+* Jumping Buttons
+* Pricing Calculator
+* Scroll Progress
+* Stopwatch

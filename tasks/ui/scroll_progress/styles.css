@@ -1,0 +1,30 @@
+body {
+  background: #efefef;
+  padding: 30px;
+}
+
+.content {
+  background: #fff;
+  padding: 50px;
+  font-size: 18px;
+  line-height: 1.5;
+  min-height: 3000px;
+  border-radius: 4px;
+  box-shadow: 1px 1px 5px 1px #909090;
+}
+
+.shadow-3 {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19),
+  0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.scroll-line {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 6px;
+  background: darkseagreen;
+  transition: 0.5s cubic-bezier(0.75, 0.82, 0.165, 1) width;
+}
+
+
