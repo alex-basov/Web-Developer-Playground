@@ -1,36 +1,59 @@
+//
+// Score-keeping app
+//
+
+console.clear()
+
+// Players data
+function Player(name) {
+  this.name = name;
+  this.score = 0;
+}
+
+const player1 = new Player('Bill');
+const player2 = new Player('Jennifer');
+
+// DOM constants
+let numberInput = document.querySelector('#max-score');
+let resetButton = document.getElementById('reset');
+let gameResult = document.querySelector('#result');
+let player1ScoreDisplay = document.querySelector('#player1Display');
+let player2ScoreDisplay = document.querySelector('#player2Display');
+let winningScoreDisplay = document.querySelector('#info span');
 let player1Button = document.querySelector('#player1');
 let player2Button = document.querySelector('#player2');
-let player1Display = document.querySelector('#player1Display');
-let player2Display = document.querySelector('#player2Display');
-let resetButton = document.getElementById('reset');
-let numberInput = document.querySelector('input');
-let paragraph = document.querySelector('p');
-let winningScoreDisplay = document.querySelector('p span');
-let player1Score = 0;
-let player2Score = 0;
+
+// Game variables
 let gameOver = false;
 let winningScore = 5;
 
+numberInput.placeholder = 'Type max score';
+player1Button.textContent = player1.name;
+player2Button.textContent = player2.name;
+
 player1Button.addEventListener('click', function() {
   if (!gameOver) {
-    player1Score++;
-
-    if (player1Score === winningScore) {
-      player1Display.classList.add('winner');
+    player1.score++;
+    if (player1.score === winningScore) {
+      player1ScoreDisplay.classList.add('winner');
       gameOver = true;
+      gameResult.textContent = `${player1.name} wins`
+      gameResult.style.display = 'block';
     }
-    player1Display.textContent = player1Score;
+    player1ScoreDisplay.textContent = player1.score;
   }
 });
 
 player2Button.addEventListener('click', function() {
   if (!gameOver) {
-    player2Score++;
-    if (player2Score === winningScore) {
-      player2Display.classList.add('winner');
+    player2.score++;
+    if (player2.score === winningScore) {
+      player2ScoreDisplay.classList.add('winner');
       gameOver = true;
+      gameResult.textContent = `${player2.name} wins`
+      gameResult.style.display = 'block';
     }
-    player2Display.textContent = player2Score;
+    player2ScoreDisplay.textContent = player2.score;
   }
 });
 
@@ -43,11 +66,12 @@ numberInput.addEventListener('change', function() {
 });
 
 function reset() {
-  player1Score = 0;
-  player2Score = 0;
-  player1Display.textContent = 0;
-  player2Display.textContent = 0;
-  player1Display.classList.remove('winner');
-  player2Display.classList.remove('winner');
+  player1.score = 0;
+  player2.score = 0;
+  player1ScoreDisplay.textContent = 0;
+  player2ScoreDisplay.textContent = 0;
+  player1ScoreDisplay.classList.remove('winner');
+  player2ScoreDisplay.classList.remove('winner');
   gameOver = false;
+  gameResult.style.display = 'none';
 }

@@ -24,7 +24,7 @@ submitBtn.onclick = () => {
 
   negativeResult = `No, number <b>${userNumber}</b> is not in the array. <b>Try again</b>`;
 
-  positiveResult = `Yes, number <b>${userNumber} < /b> is part of the array <br> [${formattedArray}]`;
+  positiveResult = `Yes, number <b>${userNumber}</b> is part of the array <br> [${formattedArray}]`;
 
 
 

@@ -100,12 +100,8 @@ function generateRandomColors(num) {
 }
 
 function randomColor() {
-  // pick a 'red' from 0 to 255
-  let red = Math.floor(Math.random() * 256);
-  // pick a 'green' from 0 to 255
-  let green = Math.floor(Math.random() * 256);
-  // pick a 'blue' from 0 to 255
-  let blue = Math.floor(Math.random() * 256);
-  // rgb (red, green, blue);
-  return 'rgb(' + red + ', ' + green + ', ' + blue + ')';
+  let r = Math.floor(Math.random() * 256);
+  let g = Math.floor(Math.random() * 256);
+  let b = Math.floor(Math.random() * 256);
+  return `rgb(${r}, ${g}, ${b})`;
 }

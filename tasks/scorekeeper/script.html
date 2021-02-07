@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Scorkeeper</title>
+  <title>Scorekeeper</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -17,16 +17,21 @@
       <span id="player1Display">0</span>
       to
       <span id="player2Display">0</span>
+      <span id="result"></span>
     </h2>
 
-    <p>Playing to: <span>5</span></p>
 
-    <input type="number">
+    <label id="info" for="max-score">Playing to: <span>5</span></label>
 
-    <button id='player1'>Player 1</button>
-    <button id='player2'>Player 2</button>
+    <input id="max-score" type="number">
+
+    <button id='player1'>player button</button>
+    <button id='player2'>player button</button>
     <button id='reset'>Reset</button>
+
+
   </div>
+
 
   <script src="scorekeeper.js"></script>
 </body>
